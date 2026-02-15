@@ -29,6 +29,8 @@ export class Fetcher {
 
         if (this.config.accessToken) {
             headers['Authorization'] = `Bearer ${this.config.accessToken}`;
+        } else if (this.config.apiKey) {
+            headers['Authorization'] = `Bearer ${this.config.apiKey}`;
         }
 
         if (this.config.apiKey) {
@@ -56,11 +58,6 @@ export class Fetcher {
                     data?.error?.code,
                     data?.error?.issues
                 );
-            }
-
-            // If the response follows the standard { data: ... } wrapper
-            if (data && typeof data === 'object' && 'data' in data) {
-                return data.data as T;
             }
 
             return data as T;

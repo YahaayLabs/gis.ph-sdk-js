@@ -1,6 +1,6 @@
 {
   "name": "gis.ph-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Official JavaScript/TypeScript SDK for api.gis.ph - Access Philippine geographical data (Provinces, Barangays, LGUs) and more.",
   "type": "module",
   "files": [
