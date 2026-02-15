@@ -16,7 +16,7 @@ pnpm add gis.ph-sdk
 
 ## Getting Started
 
-Initialize the client with your API key or access token.
+Initialize the client with your API key or access token. You can obtain an API key by signing up at [https://gis.ph](https://gis.ph).
 
 ```typescript
 import { GisPh } from 'gis.ph-sdk';
