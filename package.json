@@ -1,0 +1,53 @@
+{
+  "name": "gis.ph-sdk",
+  "version": "1.0.0",
+  "description": "Official JavaScript/TypeScript SDK for api.gis.ph - Access Philippine geographical data (Provinces, Barangays, LGUs) and more.",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "philippines",
+    "gis",
+    "sdk",
+    "api",
+    "barangay",
+    "province",
+    "lgu",
+    "regions",
+    "typescript"
+  ],
+  "author": "Gerald Villacarlos <gerald@yahaay.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yahaaylabs/gis.ph-sdk-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yahaaylabs/gis.ph-sdk-js/issues"
+  },
+  "homepage": "https://github.com/yahaaylabs/gis.ph-sdk-js#readme",
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  }
+}
