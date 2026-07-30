@@ -48,10 +48,10 @@ console.log(response.data); // Array of Province objects
 ```
 
 #### Get Province
-Retrieve details for a specific province by ID.
+Retrieve details for a specific province by **PSGC code**.
 
 ```typescript
-const { data: province } = await client.provinces.get('PROVINCE_ID');
+const { data: province } = await client.provinces.get('0702200000'); // Cebu
 ```
 
 ### Barangays
@@ -80,10 +80,10 @@ const response = await client.barangays.search({
 ```
 
 #### Get Barangay
-Retrieve details for a specific barangay by ID.
+Retrieve details for a specific barangay by **PSGC code**.
 
 ```typescript
-const { data: barangay } = await client.barangays.get('BARANGAY_ID');
+const { data: barangay } = await client.barangays.get('0730600041'); // Lahug, Cebu City
 ```
 
 ## Authentication
